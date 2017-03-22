@@ -1,0 +1,22 @@
+﻿@model Author
+@{
+    Layout = "_AdminLayout";
+}
+
+@{
+    ViewBag.Title = "Add Author";
+}
+
+<h1>Add Author</h1>
+
+<form asp-controller="Admin" asp-action="AddAuthor" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    First Name:
+    <input asp-for="FirstName" />
+    <span asp-validation-for="FirstName" class="text-danger"></span><br />
+    Last Name:
+    <input asp-for="LastName" /><br />
+    <span asp-validation-for="LastName" class="text-danger"></span><br />
+
+    <button type="submit">Post</button>
+</form>

@@ -1,0 +1,19 @@
+﻿﻿@model CommentViewModel
+@{
+    ViewBag.Title = "Comment";
+}
+<div class="container">
+    <div class="jumbotron">
+        <form asp-controller="Profile" asp-action="Comment" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input asp-for="ReviewID" type="hidden" />
+            <p>
+                <textarea asp-for="Body" class="form-control" placeholder="Say something!"></textarea><br />
+
+            </p>
+            <p>
+            </p>
+            <button type="submit" class="frontButtons">Comment</button>
+        </form>
+    </div>
+</div>

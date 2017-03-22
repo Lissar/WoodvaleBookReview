@@ -1,0 +1,23 @@
+﻿@model Review
+
+@Html.ActionLink(@Model.Reviewer.DisplayName, "ReviewsByUser", "Profile", new { username = @Model.Reviewer.UserName }) <br />
+<h4>@Html.ActionLink(@Model.Book.Title, "ReviewsByBook", "Book", new { title = @Model.Book.Title })</h4> <br />
+
+<div class="container">
+    <div class="blockGroups">
+        <h4>@Model.Title</h4><br />
+        @Model.Body<br /><br />
+        @Html.ActionLink("Add Comment", "Comment", "Profile", new { id = Model.ReviewID })
+    </div>
+</div>
+<br /><br />
+        @foreach (var c in Model.Comments)
+        { <div class="container">
+                <div class="blockGroups">
+                    @Html.ActionLink(@c.Commenter, "ReviewsByUser", "Profile", new { username = @c.Commenter }) <br />
+                    @c.Body<br /><br />
+                </div>
+            </div>
+        }
+
+        

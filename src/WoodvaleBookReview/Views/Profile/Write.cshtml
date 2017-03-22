@@ -1,0 +1,22 @@
+﻿﻿@model ReviewViewModel
+
+@{
+    ViewBag.Title = "Write a review";
+}
+
+<div class="container">
+    <form asp-controller="Profile" asp-action="Write" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="jumbotron">
+            <div class="col-xs-5">
+                @Html.DropDownListFor(r => r.BookID, Model.BookList, new { @class = "form-control" })<br />
+                <input asp-for="Title" class="form-control" placeholder="Title" />
+                <br />
+            </div>
+            <textarea asp-for="Body" class="form-control" placeholder="Write a review!"></textarea><br />
+            <br />
+            <button type="submit" class="frontButtons">Submit Review</button>
+        </div>
+    </form>
+</div>

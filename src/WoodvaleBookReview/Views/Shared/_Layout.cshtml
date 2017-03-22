@@ -1,0 +1,36 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+    <link rel="stylesheet" asp-href-include="lib/styles/bookstyles.css" />
+    <script asp-src-include="lib/jquery/dist/*.min.js"></script>
+    <script asp-src-include="jquery-validation/dist/jquery.*.min.js"></script>
+    <script asp-src-include="lib/jquery-validation-unobtrusive/dist/jquery.*.min.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Reviews", "Reviews", "Book")</li>
+                </ul>
+            </div>
+        </nav>
+        <br /><br /><br /><br />
+        @RenderBody()
+        <br />
+        <div class="navbar navbar-fixed-bottom">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>

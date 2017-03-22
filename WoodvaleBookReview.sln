@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4168D6FA-ACD4-4A92-B35A-76137407DAD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{767036C4-D5E1-4DAB-BAD1-05E33065DF21}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WoodvaleBookReview", "src\WoodvaleBookReview\WoodvaleBookReview.xproj", "{D8102701-F829-41D6-9F39-D8BCE50E35D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8102701-F829-41D6-9F39-D8BCE50E35D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8102701-F829-41D6-9F39-D8BCE50E35D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8102701-F829-41D6-9F39-D8BCE50E35D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8102701-F829-41D6-9F39-D8BCE50E35D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8102701-F829-41D6-9F39-D8BCE50E35D9} = {4168D6FA-ACD4-4A92-B35A-76137407DAD7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿@model UserViewModel
+@{
+    ViewBag.Title = "Home";
+}
+
+@if (Model.Authenticated)
+{
+    <div class="container">
+        <div class="jumbotron">
+            <img src="~/lib/images/womanread.png" class="profileimage" />
+            <h1>@Model.DisplayName</h1>
+            <p>"@Model.Quote"</p>
+            <nav class="navbar-default">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Your Reviews", "ReviewsByUser", "Profile", new { username = @Model.UserName })</li>
+                    <li>@Html.ActionLink("Write Review", "Write", "Profile")</li>
+                    <li>@Html.ActionLink("Edit Profile", "Edit", "Profile")</li>
+                    <li><a asp-controller="Login" asp-action="Logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome!</h1>
+
+            <input type="button" value="Create Account" onclick="location.href='@Url.Action("Register", "Login" )'" class="frontButtons" />
+            <input type="button" value="Login" onclick="location.href='@Url.Action("Login", "Login" )'" class="frontButtons" />
+             
+
+        </div>
+    </div>
+}

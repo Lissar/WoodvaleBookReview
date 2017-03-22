@@ -1,0 +1,22 @@
+﻿﻿@model UserViewModel
+
+@{
+    ViewBag.Title = "Edit Profile";
+}
+
+
+<form asp-controller="Profile" asp-action="Edit" method="post">
+    <div class="container">
+        <div class="jumbotron">
+        
+            <div class="col-xs-4">
+                <input asp-for="DisplayName" class="form-control" placeholder="Display Name" />
+                <br />
+            </div>
+
+        <textarea asp-for="Quote" class="form-control" placeholder="Write a quote"></textarea><br />
+
+        <button type="submit" class="frontButtons">Edit</button>
+        </div>
+    </div>
+</form>

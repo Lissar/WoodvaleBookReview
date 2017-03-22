@@ -1,0 +1,18 @@
+﻿@model List<WoodvaleBookReview.Models.Review>
+@{
+    ViewBag.Title = "Recent Reviews";
+}
+
+@foreach (var r in Model)
+{
+    @if (r != null)
+    {
+        <div class="container">
+            <div class="blockGroups">
+                @Html.ActionLink(@r.Reviewer.DisplayName, "ReviewsByUser", "Profile", new { username = @r.Reviewer.UserName }) :
+                @Html.ActionLink(@r.Book.Title, "ReviewsByBook", "Book", new { title = @r.Book.Title }) <br />
+                <font size="4">@Html.ActionLink(@r.Title, "Read", "Profile", new { id = @r.ReviewID })</font> <br /><br />
+            </div>
+        </div>
+    }
+}

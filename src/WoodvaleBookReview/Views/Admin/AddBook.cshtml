@@ -1,0 +1,24 @@
+﻿@model BookViewModel
+@{
+    Layout = "_AdminLayout";
+}
+
+@{
+    ViewBag.Title = "Add Book";
+}
+
+<h1>Add Book</h1>
+
+<form asp-controller="Admin" asp-action="AddBook" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @Html.DropDownListFor(b => b.AuthorID, Model.AuthorList)<br /><br />
+    Book Title:
+    <input asp-for="Title" />
+    <span asp-validation-for="Title" class="text-danger"></span><br />
+    Genre:
+    <input asp-for="Genre" />
+    <span asp-validation-for="Genre" class="text-danger"></span><br />
+
+    <button type="submit">Post</button>
+</form>
